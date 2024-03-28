@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css font Awesome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="">
+      <div
+        class="container d-flex justify-content-center align-items-center vh-100"
+      >
+        <div class="row w-75">
+          <div class="col b-shadow p-5 rounded text-center">
+            <h1 class="mb-3">Smart Login System</h1>
+            <input
+            onchange="validateInput(this)"
+              type="text"
+              class="form-control mb-2"
+              placeholder="Enter Your Name"
+              id="singUpName"
+            />
+            <span class="text-start text-danger mb-3 d-none"
+              >must cantain at least 4 character</span
+            >
+            <input
+            onchange="validateInput(this)"
+              type="email"
+              class="form-control mb-2"
+              placeholder="Enter Your Email"
+              id="singUpEmail"
+            
+            />
+            <span class="text-start text-danger mb-3 d-none"
+              >must be like this "aa@Gmail.com"
+            </span>
+            <input
+            onchange="validateInput(this)"
+              type="password"
+              class="form-control mb-3"
+              placeholder="Enter Password"
+              id="singUpPassword"
+            />
+            <span class="d-none text-start text-danger mb-3"
+              ><ul class="m-0 list-unstyled">
+                <li>first litter must be capital</li>
+                <li>must contain at least one number</li>
+              </ul></span
+            >
+            <button
+              onclick=" signUP()"
+              type="button"
+              class="btn btn-outline-info w-100 mb-2"
+              id="btnSignUp"
+            >
+              Sign Up
+            </button>
+            <div id="signWrong"></div>
+            <div id="signSuccess"></div>
+            <p class="text-white">
+              You have an account?
+              <a href="./index.html" class="nav-link d-inline-block">Sign in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

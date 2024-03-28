@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css font Awesome-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div class="">
+      <div
+        class="container d-flex justify-content-center align-items-center vh-100"
+      >
+        <div class="row w-75">
+          <div class="col b-shadow p-5 rounded text-center">
+            <h1 class="mb-3">Smart Login System</h1>
+            <input
+              onchange="validateInput(this)"
+              onblur="isLoginEmailExit()"
+              type="email"
+              class="form-control mb-2"
+              placeholder="Enter Your Mail"
+              id="signInEmail"
+            />
+            <span class="text-start text-danger mb-3 d-none" id="emailExit"
+              >Wrong Email</span
+            >
+            <!-- <span class="text-start text-danger mb-3 d-none">Email not Exit You must sign up first</span> -->
+            <input
+              onchange="validateInput(this)"
+              type="password"
+              class="form-control mb-2"
+              placeholder="Enter Your Password"
+              id="signInPass"
+            />
+            <span class="text-start text-danger mb-3 d-none"
+              >Wrong password</span
+            >
+            <button
+              type="button"
+              onclick="signIN()"
+              class="btn btn-outline-info w-100 mb-2"
+              id="btnSignIn"
+            >
+              Sign in
+            </button>
+            <div id="wrong"></div>
+            <p class="text-white">
+              Don’t have an account?
+              <a href="./singUp.html" class="nav-link d-inline-block"
+                >Sign Up</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
