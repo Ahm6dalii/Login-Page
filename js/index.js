@@ -42,15 +42,15 @@ if (username) {
 
 // --------for sign UP--------
 function signUP() {
-  // document.getElementById("signWrong").innerHTML =``;
+  // document.getElementById("signUpMess").innerHTML =``;
   if (isSignUpEmpty() == true) {
-    document.getElementById("signWrong").innerHTML =
+    document.getElementById("signUpMess").innerHTML =
       '<span class="p-2 text-danger">All inputs is required</span>';
     return false;
   }
 
   if (isSignUpEmailExit() == true) {
-    document.getElementById("signWrong").innerHTML =
+    document.getElementById("signUpMess").innerHTML =
       '<span class="p-2 text-danger">email exit</span>';
     return;
   }
@@ -69,14 +69,10 @@ function signUP() {
     localStorage.setItem("Users", JSON.stringify(users));
     console.log(user);
     console.log(users);
-    document.getElementById("signSuccess").innerHTML =
+    document.getElementById("signUpMess").innerHTML =
       '<span class="p-2 text-success">Add Success</span>';
     clearForm();
-  } else {
-    document.getElementById("signWrong").innerHTML =
-      '<span class="p-2 text-danger">incorrect data input</span>';
-    document.getElementById("signSuccess").innerHTML = ``;
-  }
+  } 
 }
 
 function isSignUpEmpty(){
@@ -120,10 +116,10 @@ function signIN() {
     if (users[i].email.includes(email) && password == users[i].password) {
       localStorage.setItem("seesionUser", users[i].name);
       if (baseURL == "/") {
-        location.replace("https://" + location.hostname + "/home.html");
+        location.replace("https://" + location.hostname+location.pathname.split("/")[1]+ "/home.html");
       } else {
         location.replace(baseURL + "/home.html");
-      }
+      }    
       return true;
     }
   }
@@ -185,6 +181,5 @@ function clearForm() {
   singUpEmail.classList.remove("is-valid");
   singUpPassword.value = "";
   singUpPassword.classList.remove("is-valid");
-  document.getElementById("signWrong").innerHTML = "";
 }
 

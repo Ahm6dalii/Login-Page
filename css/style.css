@@ -74,3 +74,11 @@ textarea:focus {
   font-size: 3rem;
   color: var(--main-color);
 }
+
+.nav-link {
+  text-decoration: underline;
+}
+.nav-link:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
