@@ -116,7 +116,7 @@ function signIN() {
     if (users[i].email.includes(email) && password == users[i].password) {
       localStorage.setItem("seesionUser", users[i].name);
       if (baseURL == "/") {
-        location.replace("https://" + location.hostname +"/"+location.pathname.split("/")[1]+ "/home.html");
+        location.replace("https://" + location.hostname +"/"+location.pathname.split("/")[1].toString()+ "/home.html");
       } else {
         location.replace(baseURL + "/home.html");
       }    
