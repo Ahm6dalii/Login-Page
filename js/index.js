@@ -116,9 +116,9 @@ function signIN() {
   for (var i = 0; i < users.length; i++) {
     if (users[i].email.includes(email) && password == users[i].password) {
       localStorage.setItem("seesionUser", users[i].name);
-      if (baseURL == "/") {
+    
         location.replace("https://ahm6dalii.github.io/Login-Page/home.html");
-      }
+      
       return true;
     }
   }
