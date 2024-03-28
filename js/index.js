@@ -118,7 +118,7 @@ function signIN() {
       if (baseURL == "/") {
         location.replace("https://" + location.hostname +"/"+location.pathname.split("/")[1]+ "/home.html");
       } else {
-        location.replace(baseURL+"/"+location.pathname.split("/")[1] + "/home.html");
+        location.replace(baseURL + "/home.html");
       }    
       return true;
     }
