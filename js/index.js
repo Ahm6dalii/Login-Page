@@ -99,7 +99,8 @@ function isSignUpEmailExit() {
 
 // -------for Login---------- 
 function signIN() {
-
+  var email = LoginEmail.value;
+  var password = loginpassword.value;
   if (isloginEmpty() == true) {
     document.getElementById("wrong").innerHTML =
       '<span class="p-2 text-danger">All inputs is required</span>';
@@ -113,8 +114,7 @@ function signIN() {
     return false;
   }
 
-  var email = LoginEmail.value;
-  var password = loginpassword.value;
+
 
   for (var i = 0; i < users.length; i++) {
     if (users[i].email.includes(email) && password == users[i].password) {
