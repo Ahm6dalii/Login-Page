@@ -94,6 +94,7 @@ function isSignUpEmailExit() {
 
 
 // -------for Login---------- 
+const currentUrl = window.location.href;
 function signIN() {
   var email = LoginEmail.value;
   var password = loginpassword.value;
@@ -113,7 +114,6 @@ function signIN() {
 
 
   for (var i = 0; i < users.length; i++) {
-    const currentUrl = window.location.href
     if (users[i].email.includes(email) && password == users[i].password) {
       localStorage.setItem("seesionUser", users[i].name);
       if (baseURL == "/") {
