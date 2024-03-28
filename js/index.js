@@ -117,10 +117,8 @@ function signIN() {
     if (users[i].email.includes(email) && password == users[i].password) {
       localStorage.setItem("seesionUser", users[i].name);
       if (baseURL == "/") {
-        location.replace(currentUrl+ "home.html");
-      } else {
-        location.replace(baseURL + "/home.html");
-      }    
+        location.replace("https://ahm6dalii.github.io/Login-Page/home.html");
+      }
       return true;
     }
   }
